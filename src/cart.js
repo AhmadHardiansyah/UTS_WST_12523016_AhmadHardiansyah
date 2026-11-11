@@ -1,7 +1,6 @@
 /** Menghitung total dari daftar barang di keranjang. Harga dalam rupiah. */
 export function calculateTotal(cart) {
-  var discount = 0;
-  return cart.reduce((total, item) => total + item.price, 0);
+  return cart.reduce((total, item) => total + item.price * item.quantity, 0);
 }
 
 /** Memasukkan produk atau menambah jumlah produk yang sudah ada. */
